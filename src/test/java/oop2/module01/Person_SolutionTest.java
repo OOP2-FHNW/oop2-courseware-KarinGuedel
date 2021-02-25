@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * @author Dieter Holz
  */
-class PersonTest {
+class Person_SolutionTest {
 
     @Test
     void testInit() {
@@ -19,7 +19,7 @@ class PersonTest {
         double height = 1.75;
 
         //when
-        Person p = new Person(age, weight, height);
+        Person_Solution p = new Person_Solution(age, weight, height);
 
         //then
         assertEquals(age   , p.getAge());
@@ -30,7 +30,7 @@ class PersonTest {
     @Test
     void testBMI() {
         //given
-        Person p = new Person(45, 90.0, 1.75);
+        Person_Solution p = new Person_Solution(45, 90.0, 1.75);
 
         //when
         double bmi = p.getBMI();
@@ -42,7 +42,7 @@ class PersonTest {
     @Test
     void testInitFriends() {
         //given
-        Person p = new Person(45, 90.0, 1.75);
+        Person_Solution p = new Person_Solution(45, 90.0, 1.75);
 
         //when
         int numberOfFriends = p.numberOfFriends();
@@ -54,8 +54,8 @@ class PersonTest {
     @Test
     void testNewFriend(){
         //given
-        Person stuart = new Person(45, 90.0, 1.75);
-        Person kevin  = new Person(47, 79.0, 1.78);
+        Person_Solution stuart = new Person_Solution(45, 90.0, 1.75);
+        Person_Solution kevin  = new Person_Solution(47, 79.0, 1.78);
 
         //when
         stuart.newFriend(kevin);
@@ -70,8 +70,8 @@ class PersonTest {
     @Test
     void testAddFriendTwice(){
         //given
-        Person stuart = new Person(45, 90.0, 1.75);
-        Person kevin  = new Person(47, 79.0, 1.78);
+        Person_Solution stuart = new Person_Solution(45, 90.0, 1.75);
+        Person_Solution kevin  = new Person_Solution(47, 79.0, 1.78);
         stuart.newFriend(kevin);
 
         //when
@@ -87,8 +87,8 @@ class PersonTest {
     @Test
     void testNotAFriendAnymore(){
         //given
-        Person stuart = new Person(45, 90.0, 1.75);
-        Person kevin  = new Person(47, 79.0, 1.78);
+        Person_Solution stuart = new Person_Solution(45, 90.0, 1.75);
+        Person_Solution kevin  = new Person_Solution(47, 79.0, 1.78);
         stuart.newFriend(kevin);
 
         //when
