@@ -1,4 +1,4 @@
-package oop2.module01;
+package oop2.module02;
 
 import java.util.Objects;
 
@@ -6,24 +6,25 @@ import java.util.Objects;
  * @author Dieter Holz
  */
 public class Person {
-    private int    age;
-    private double weight;
-    private double height;
+	private int    age;
+	private double weight;
+	private double height;
+
     private Person[] friends;
 
-    public Person(int age, double weight, double height) {
-        this.age    = age;
-        this.weight = weight;
-        this.height = height;
+	public Person(int age, double weight, double height) { // weshalb muss Person hier nicht aufgeführt werden?
+		this.age    = age;
+		this.weight = weight;
+		this.height = height;
         friends = new Person[10];
     }
 
-    public double getBMI() {
-        return weight / (height * height);
-    }
+	public double getBMI() {
+		return weight / (height * height);
+	}
 
     public void newFriend(Person friend) {
-        if(hasAsFriend(friend)){
+	    if(hasAsFriend(friend)){
             return;
         }
 
@@ -57,7 +58,7 @@ public class Person {
     }
 
     public void noFriend(Person friend) {
-        if(hasAsFriend(friend)){
+	    if(hasAsFriend(friend)){
             for (int i = 0; i < friends.length; i++) {
                 if(Objects.equals(friends[i], friend)){
                     friends[i] = null;
@@ -68,29 +69,31 @@ public class Person {
         }
     }
 
-    //alle Getter und Setter
+	//alle Getter und Setter
 
-    public int getAge() {
-        return age;
-    }
+	public int getAge() {
+		return age;
+	}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+	public void setAge(int age) {
+		this.age = age;
+	}
 
-    public double getWeight() {
-        return weight;
-    }
+	public double getWeight() {
+		return weight;
+	}
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
 
-    public double getHeight() {
-        return height;
-    }
+	public double getHeight() {
+		return height;
+	}
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+
 }
